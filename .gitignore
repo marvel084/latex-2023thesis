@@ -3,7 +3,7 @@
 .stfolder
 .vscode
 # main.pdf
-
+/tjumain.pdf
 # tmp files of ppt,excel documents
 ~$*
 ~$figures.xlsx
@@ -19,3 +19,4 @@
 *.fls
 *.fdb_latexmk
 *.out
+*.thm
