@@ -1,0 +1,141 @@
+% !Mode:: "TeX:UTF-8"
+% !TEX root = tjumain.tex
+
+\iffalse
+\bibliography{reference/reference.bib} % 欺骗latextools获取bib文件
+\fi
+
+%%%%%%% 正文 %%%%%%%
+
+
+
+
+\chapter{好猪}
+
+\section{行内公式与行间公式}
+
+考虑整个供应链的利润函数$\beta_{SC}$。因为$\frac{\partial\beta_{SC}}{\partial p_1}=q-\int_0^q F(x)\ud x>0$，所以$\beta_{SC}$对$p_1$单调递增，所以：
+\begin{equation}
+\label{dscNoStgProof0}
+\beta_{SC}(q_s,p_{1s},p_{2s})<\beta_{SC}(q_s,p_{1n},p_{2n})
+\end{equation}
+
+因为对于$\forall q\in[q_s, q_n)$，有：
+\[ \left.\frac{\partial \beta_{SC}}{\partial q}\right|_{(q,p_{1n},p_{2n})}=p_{1n}-c+c_L+(p_{2n}-p_{1n}-c_L)F(q) \]
+
+销售商决策如式~\eqref{rcond}~所示：
+\begin{equation}
+\label{rcond}
+\left\{\begin{array}{l}
+p_{1s}=v_h-(v_h-p_2)\mathbb{E}(\varphi) \\
+p_{2s}=v_l \\
+q_s \in \underset{q \geq 0}{\mathrm{argmax}} \beta_R (q, p_1, p_2) \\
+\end{array}\right.
+\end{equation}
+
+\section{插图}
+
+当$q=5190$时，$p_{1s}=5.78,p_{2s}=2.95$，图像如图~\ref{fig:simuP1P2Result}~所示。
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=0.75\textwidth]{figures/p1p2figure.eps}
+\caption{最优$p_1, p_2$仿真结果}\label{fig:simuP1P2Result}
+\vspace{-1em}
+\end{figure}
+
+\section{代码环境}
+
+很多和计算机专业背景相关的同学都会使用到代码环境，使用~\verb|\verb|~指令或者是~\verb|verbatim|~环境固然是一种选择，但是比不上专门的~lstlisting~环境这么专业。
+
+\begin{lstlisting}
+int main(int argc, char ** argv) {
+    printf("Hello world!\n");
+    return 0;
+}
+\end{lstlisting}
+
+\section{普通表格的绘制方法}
+
+表格应具有三线表格式，其标准格式如表 \ref{tab:table1} 所示。
+\begin{table}[htbp]
+\caption{符合本科生毕业论文绘图规范的表格}\label{tab:table1}
+\vspace{0.5em}\centering\wuhao
+\begin{tabular}{ccccc}
+\toprule[1.5pt]
+\textbf{ $\pmb{D}$(in)} & \textbf{ $\pmb{P_u}$(lbs)} & \textbf{ $\pmb{u_u}$(in)} & \textbf{ $\pmb{\beta}$} & \textbf{$\pmb{G_f}$(psi.in) }\\
+\midrule[1pt]
+ 5 & 269.8 & 0.000674 & 1.79 & 0.04089\\
+10 & 421.0 & 0.001035 & 3.59 & 0.04089\\
+20 & 640.2 & 0.001565 & 7.18 & 0.04089\\
+ 5 & 269.8 & 0.000674 & 1.79 & 0.04089\\
+10 & 421.0 & 0.001035 & 3.59 & 0.04089\\
+20 & 640.2 & 0.001565 & 7.18 & 0.04089\\
+ 5 & 269.8 & 0.000674 & 1.79 & 0.04089\\
+10 & 421.0 & 0.001035 & 3.59 & 0.04089\\
+20 & 640.2 & 0.001565 & 7.18 & 0.04089\\
+ 5 & 269.8 & 0.000674 & 1.79 & 0.04089\\
+10 & 421.0 & 0.001035 & 3.59 & 0.04089\\
+20 & 640.2 & 0.001565 & 7.18 & 0.04089\\
+\bottomrule[1.5pt]
+\end{tabular}
+\vspace{\baselineskip}
+\end{table}
+
+这里是另一个表格，如\ref{tab:table2}所示，表头加粗，中间线使用0.5pt。
+
+\begin{table}[htbp]
+\caption{表头加粗的表格}\label{tab:table2}
+\vspace{0.5em}\centering\wuhao
+\begin{tabular}{ccccc}
+\toprule[1.5pt]
+\textbf{年龄} & \textbf{ 体重（kg）} & \textbf{ 爆率} & \textbf{ 生产效率} & \textbf{暴击率 }\\
+\midrule[0.5pt]
+ 5 & 269.8 & 0.000674 & 1.79 & 0.04089\\
+10 & 421.0 & 0.001035 & 3.59 & 0.04089\\
+20 & 640.2 & 0.001565 & 7.18 & 0.04089\\
+ 5 & 269.8 & 0.000674 & 1.79 & 0.04089\\
+10 & 421.0 & 0.001035 & 3.59 & 0.04089\\
+20 & 640.2 & 0.001565 & 7.18 & 0.04089\\
+ 5 & 269.8 & 0.000674 & 1.79 & 0.04089\\
+10 & 421.0 & 0.001035 & 3.59 & 0.04089\\
+20 & 640.2 & 0.001565 & 7.18 & 0.04089\\
+ 5 & 269.8 & 0.000674 & 1.79 & 0.04089\\
+10 & 421.0 & 0.001035 & 3.59 & 0.04089\\
+20 & 640.2 & 0.001565 & 7.18 & 0.04089\\
+\bottomrule[1.5pt]
+\end{tabular}
+\vspace{\baselineskip}
+\end{table}
+
+\subsection{好猪}
+
+卧槽哥们 你是真的肥 我都不干杀猪好多年了 今天看到你这种极高老母猪 第一次想重操旧业。
+
+卧槽哥们你真是一头好猪，检疫也合格，重量也达标，智商也不高，真tm是一头好猪！
+
+紧急检查! 请主播立即掀起上衣露出身上的检疫合格证明，否则立即停播整改。
+
+玩神有着奶绿的束缚，麻优米的知性，东雪莲的率真，塔菲的风情以及猫雷的勤奋。
+
+玩鸡器这种熟男，就是有一股媚劲不是那些年轻男孩能比的，成熟的声线总能掠拨我内心的火热
+要说媚劲具体在哪，那就是媚有脑子。
+
+卧槽兄弟你是真的中立，解说中立，性别中立，性取向中立，真TM中立！
+
+
+%%%%%%% 结论 %%%%%%%
+
+\addcontentsline{toc}{chapter}{结\quad 论} %添加到目录中
+
+\chapter*{结\quad 论}
+
+你说的对。
+
+你似乎有点刻晴了，给我都整甘雨了，你是不是脑子不太凝光，真想给你一可莉！
+
+你说的对 但是《烟神》是由丁真珍珠自主研发的一款全新开放世界冒险游戏。游戏发生在一个被称作「理塘」的幻想世界，在这里被神选中的人将被授予「电子烟」，引导尼古丁之力。你将扮演一位名为「芙蓉王」的神秘角色，在自由的旅行中邂逅性格各异、能力独特的动物朋友们，和它们一起击败强敌，找回不存在的亲人的同时，逐步发掘「理塘」的真相。
+
+张强！张强！刘洪！刘洪！
+
+我好像吃草莓啊，可惜草莓太贵了！
+
