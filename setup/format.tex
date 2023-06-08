@@ -91,7 +91,9 @@
 %%%%%%%%%% Chapter and Section %%%%%%%%%%%%%
 \setcounter{secnumdepth}{4}
 \setlength{\parindent}{2em}
-\renewcommand{\chaptername}{\prechaptername\CJKnumber{\thechapter}\postchaptername}
+
+\renewcommand{\chaptername}{\prechaptername\zhnumber{\thechapter}\postchaptername}
+%\titleformat{\chapter}{\centering\xiaosan\song}{\hei第\,\chinese{chapter}\,章}{2em}{}
 \titleformat{\chapter}{\centering\xiaosan\song}{\hei\chaptername}{2em}{}
 \titlespacing{\chapter}{0pt}{0.1\baselineskip}{0.8\baselineskip}
 \titleformat{\section}{\sihao\hei}{\thesection}{1em}{}
@@ -259,7 +261,7 @@
   \includegraphics[width=0.4\textwidth]{figures/tjuname.eps}
   \end{figure}
   \vspace*{21pt}
-  \hei\erhao{\textbf{本科生毕业论文}}
+  \hei\erhao{\textbf{本科生毕业设计}}
   \vspace*{52.5pt}
 
   \begin{figure}[h]
@@ -316,7 +318,7 @@
 \vspace{\baselineskip}
 
 \hangafter=1\hangindent=60pt\noindent
-{\textbf{Keywords:}} \@ekeywords
+{\textbf{KEY WORDS:}} \@ekeywords
 \thispagestyle{empty}
 }
 \makeatother
